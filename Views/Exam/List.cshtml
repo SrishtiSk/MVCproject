@@ -1,0 +1,21 @@
+﻿@model List<Test>
+
+
+<h2>This Week Internals Schedule</h2>
+@*</p>@ViewBag.Exams[0]</p>
+*@
+
+
+@*@foreach (string s in ViewBag.Exams)
+{
+    <p>@s</p>
+}*@
+
+
+<ol>
+    @foreach (Test a in Model)
+    {
+        <li><b>EXAMNAME:</b>@a.Name<b>TESTDATE:</b>@a.Date<b>SCORE:</b>@a.Maxscore<b>TIME:</b>@a.TimeGiven</li>
+    }
+</ol>
+
